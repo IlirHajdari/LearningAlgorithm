@@ -23,3 +23,26 @@ vector<float> y
   1
 };
 
+vector<float> W
+{
+  0.5,
+  0.5,
+  0.5,
+  0.5
+};
+
+vector <float> sigmoid_d (const vector <float>& m1)
+{
+  const unsigned long VECTOR_SIZE = m1.size();
+  vector <float> output (VECTOR_SIZE);
+  
+  for(unsigned i = 0; i != VECTOR_SIZE; i++)
+  {
+    output[ i ] = m1[ i ] * (1 - m1[ i ]); 
+  }
+  
+  return output;
+  
+  
+}
+
